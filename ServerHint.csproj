@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net4.8</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <LangVersion>10.0</LangVersion>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ExMod.Exiled" Version="9.14.2" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="ref/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="Assembly-CSharp-firstpass" HintPath="ref/Assembly-CSharp-firstpass.dll" Private="false" />
+  </ItemGroup>
+
+</Project>
