@@ -18,8 +18,6 @@ public class EventHandler {
     private void Event() => Timing.RunCoroutine(Display().CancelWith(Server.Host.GameObject), tag);
 
     private IEnumerator<float> Display() {
-
-
 	string hint;
 	float time;
 
@@ -59,5 +57,4 @@ public class EventHandler {
             yield return Timing.WaitForSeconds(time);
         }
     }
-
 }
