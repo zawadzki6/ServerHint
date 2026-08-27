@@ -7,7 +7,7 @@ public class Plugin : Plugin<Config> {
     public override string Name => "ServerHint";
     public override string Author => "Zawadzki <contact@zawadzki.cc>";
     public override string Prefix { get; } = "server_hint";
-    public override Version Version => new Version(2, 0, 1);
+    public override Version Version => new Version(2, 0, 2);
 
     public static Plugin? Instance { get; private set; }
 

@@ -14,6 +14,11 @@ class Parser {
 	string min, sec, total;
 	min = Round.ElapsedTime.Minutes.ToString();
 	sec = Round.ElapsedTime.Seconds.ToString();
+	if (min.Length == 1)
+	    min.Prepend('0');
+	if (sec.Length == 1)
+	    sec.Prepend('0');
+
 	total = min + ':' + sec;
 	str = str.Replace("%roundtime%", total);
 
