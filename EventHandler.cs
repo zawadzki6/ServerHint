@@ -43,11 +43,10 @@ public class EventHandler {
 
 	    if (config.spectator) {
 		foreach (Player player in Player.List) {
-		    if (player.IsDead && Round.IsStarted) {
-			hint = Parser.Parse(config.spectatorHint);;
-			time = config.spectatorRefreshRate;
-		    }
-		    player.ShowHint(hint, time);
+		    if (player.IsDead && Round.IsStarted)
+		        player.ShowHint(deadhint, config.spectatorRefreshRate);
+
+                    player.ShowHint(hint, time);
 		}
 	    }
 	    else {
