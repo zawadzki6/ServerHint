@@ -23,13 +23,7 @@ class Parser {
 	str = str.Replace("%roundtime%", total);
 
 	string tip = null!;
-        byte retry = 0;
 	Plugin.Instance!.Config.tips.TryGetRandomItem(out tip);
-
-        while (retry < 3 && tip == null) {
-            retry++;
-            Plugin.Instance!.Config.tips.TryGetRandomItem(out tip);
-        }
         Log.Debug($"got tip: \"{tip}\"");
 
         if (tip != null)

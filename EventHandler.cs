@@ -14,7 +14,6 @@ public class EventHandler {
         Exiled.Events.Handlers.Server.WaitingForPlayers -= Event;
         Timing.KillCoroutines(tag);
     }
-    
     private void Event() => Timing.RunCoroutine(Display().CancelWith(Server.Host.GameObject), tag);
 
     private IEnumerator<float> Display() {
@@ -27,7 +26,7 @@ public class EventHandler {
 	    string normalhint = Parser.Parse(config.hint);
 
 	    if (!Round.IsStarted && config.lobby) {
-		hint = Parser.Parse(config.lobbyHint);
+		hint = lobbyhint;
 		time = config.lobbyRefreshRate;
 	    }
 	    else if (!Round.IsStarted && !config.lobby) {
@@ -35,7 +34,7 @@ public class EventHandler {
 		time = 1;
 	    }
 	    else {
-		hint = Parser.Parse(config.hint);;
+		hint = normalhint;
 		time = config.refreshRate;
 	    }
 	    if (hint == "")
@@ -43,9 +42,10 @@ public class EventHandler {
 
 	    if (config.spectator) {
 		foreach (Player player in Player.List) {
-		    if (player.IsDead && Round.IsStarted)
-		        player.ShowHint(deadhint, config.spectatorRefreshRate);
-
+		    if (player.IsDead && Round.IsStarted) {
+		        player.ShowHint(deadhint, time);
+                        continue;
+                    }
                     player.ShowHint(hint, time);
 		}
 	    }

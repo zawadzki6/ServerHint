@@ -34,14 +34,11 @@ public class Events {
 	    return;
 
 	if (config.spectator) {
-	    if (player.IsDead && Round.IsStarted) {
-		hint = deadhint;
-		time = config.spectatorRefreshRate;
-	    }
-	    player.ShowHint(hint, time);
-	}
+	    if (player.IsDead && Round.IsStarted) 
+	    player.ShowHint(deadhint, time);
 	else
 	    player.ShowHint(hint, time);
+        }
     }
 
     public static void Spawned(SpawnedEventArgs ev) => SingleDisplay(ev.Player);

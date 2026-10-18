@@ -18,9 +18,8 @@ public class Config : IConfig {
     public string lobbyHint { get; set; } = "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<b>welcome outlander</b>";
 
     [Description("how often should the hints refresh")]
-    public float refreshRate { get; set; } = 24;
-    public float spectatorRefreshRate { get; set; } = 12;
-    public float lobbyRefreshRate { get; set; } = 6;
+    public float refreshRate { get; set; } = 12;
+    public float lobbyRefreshRate { get; set; } = 24;
 
     [Description("placeholder tip if any from the list failed for some reason")]
     public string placeholderTip { get; set; } = "tips will appear here...";
@@ -34,6 +33,6 @@ public class Config : IConfig {
     public string FriendlyFireOn { get; set; } = "ON";
     public string FriendlyFireOff { get; set; } = "OFF";
 
-    [Description("should the %tps% tag use direct or average tps")]
+    [Description("should the %tps% tag use direct or average tps, diff shouldn't be noticeable")]
     public bool averageTps { get; set; } = true;
 }
