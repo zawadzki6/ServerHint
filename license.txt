@@ -1,7 +1,10 @@
-Everyone is granted the freedom to run, study, share, modify and redistribute the software under the following conditions:
- 
-1. Software has to include source code free of charge.
-2. Binary form must include a mention of the license.
-3. Redistribution must apply the same license.
+Copyright (c) 2026 Zawadzki <https://zawadzki.cc>
 
-Software is hereby provided "As is" with absolutely no warranty.
+This software is provided 'as-is', without any express or implied warranty. In no event will the authors be held liable for any damages arising from the use of this software.
+
+Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+

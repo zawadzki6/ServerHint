@@ -22,8 +22,10 @@ public class Config : IConfig {
     public float spectatorRefreshRate { get; set; } = 12;
     public float lobbyRefreshRate { get; set; } = 6;
 
+    [Description("placeholder tip if any from the list failed for some reason")]
+    public string placeholderTip { get; set; } = "tips will appear here...";
     [Description("tips for the %tip% tag")]
-    public List<string> Tips { get; set; } = new List<string> {
+    public List<string> tips { get; set; } = new List<string> {
 	"an elevator nade is a good idea, if it's your idea",
 	"welcome to the server. now get out!",
 	"you should really replace this"
@@ -31,4 +33,7 @@ public class Config : IConfig {
     [Description("%friendlyfire% tag translation")]
     public string FriendlyFireOn { get; set; } = "ON";
     public string FriendlyFireOff { get; set; } = "OFF";
+
+    [Description("should the %tps% tag use direct or average tps")]
+    public bool averageTps { get; set; } = true;
 }
